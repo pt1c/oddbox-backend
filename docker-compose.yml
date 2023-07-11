@@ -13,11 +13,11 @@ services:
       - db
 
   db:
-    image: mysql:latest
+    image: mariadb:latest
     restart: always
     environment:
-      MYSQL_DATABASE: ambassador
-      MYSQL_ROOT_PASSWORD: root
+      MARIADB_DATABASE: oddbox
+      MARIADB_ROOT_PASSWORD: SwordFish
     volumes:
       - .dbdata:/var/lib/mysql
     ports:
