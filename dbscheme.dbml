@@ -1,0 +1,43 @@
+Table users {
+  id integer [primary key]
+  username varchar
+  password password
+  created_at timestamp
+}
+
+table item {
+  id integer [primary key]
+  title varcahar
+  user_id integer [ref: > users.id]
+  type_id integer [ref: - item_types.id]
+  qty integer [not null, default: 1]
+}
+
+table items_photos {
+  id integer [pk]
+  item_id integer [ref: > item.id, not null]
+  name varcahr
+  url varchar [not null]
+}
+
+table item_types {
+  id integer [pk]
+  Title varchar [not null]
+}
+
+table parameters {
+  id integer [pk]
+  name varchar [not null]
+  description text
+}
+
+table items_parameters {
+  type_id integer [ref: > item_types.id, not null]
+  parameter_id integer [ref: > parameters.id, not null]
+}
+
+table items_parameter_value {
+  item_id integer [ref: > item.id, not null]
+  paramenter_id integer [ref: > parameters.id, not null]
+  value varchar [not null]
+}
