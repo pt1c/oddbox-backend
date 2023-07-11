@@ -1,7 +1,9 @@
 package models
 
-// Item_Type struct
-type Item_Type struct {
-	ID       	uint   	`gorm:"primaryKey" json:"type_id"`
+// ItemsType struct
+type ItemsType struct {
+	Id       	uint   	`gorm:"primaryKey" json:"type_id"`
   Title    	string	`gorm:"not null" json:"type_title"`
+
+	Parameters []*TypesParameter `gorm:"many2many:types_2_parameters;"`
 }

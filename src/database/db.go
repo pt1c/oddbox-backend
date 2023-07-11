@@ -31,6 +31,7 @@ func AutoMigrate() {
 	DB.AutoMigrate(
 		models.User{},
 		models.Item{},
-		models.Item_Type{},
+		models.ItemsType{},
+		models.TypesParameter{},
 	)
 }

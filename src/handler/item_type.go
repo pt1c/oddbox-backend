@@ -11,7 +11,7 @@ import (
 func CreateItemType(c *fiber.Ctx) error {
 	db := database.DB
 
-	itemType := new(models.Item_Type)
+	itemType := new(models.ItemsType)
 
 	if err := c.BodyParser(itemType); err != nil {
 		return c.Status(500).JSON(
