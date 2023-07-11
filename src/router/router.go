@@ -1,8 +1,8 @@
 package router
 
 import (
-	"ambassador/src/handler"
-	"ambassador/src/middleware"
+	"oddbox/src/handler"
+	"oddbox/src/middleware"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"

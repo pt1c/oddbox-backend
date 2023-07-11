@@ -1,10 +1,10 @@
 package database
 
 import (
-	"ambassador/src/config"
-	"ambassador/src/models"
 	"fmt"
 	"log"
+	"oddbox/src/config"
+	"oddbox/src/models"
 	"os"
 
 	"gorm.io/driver/mysql"

@@ -1,12 +1,11 @@
 package handler
 
 import (
-	"ambassador/src/database"
-	"ambassador/src/models"
+	"oddbox/src/database"
+	"oddbox/src/models"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
-	"golang.org/x/crypto/bcrypt"
 )
 
 // GetUser get a user
@@ -85,7 +84,7 @@ func CreateUser(c *fiber.Ctx) error {
 		)
 	}
 	
-	hash, err := hashPassword(user.Password)
+	hash, err := user.HashPassword(user.Password)
 	if err != nil {
 		return c.Status(500).JSON(
 			fiber.Map{
@@ -114,9 +113,4 @@ func CreateUser(c *fiber.Ctx) error {
 			"data": user,
 		},
 	)
-}
-
-func hashPassword(password string) (string, error) {
-	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
-	return string(bytes), err
 }

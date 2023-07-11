@@ -20,6 +20,10 @@ Frontend будет доступен в другом репозитории.
 В консоле `docker-compose up`
 При успешном старте Backend будет доступен по адресу `http://localhost:8080`
 
+## Seed
+Для сидирования БД нужно запустить файл сидирования командой `go run ./cmd/seedUsers.go`  
+Если приложение работает в `docker` подключиться к контейнеру и выполнить `go run /app/cmd/seedUsers.go`
+
 ## Схема таблиц
 Схема таблиц веденся в приложении [dbdiagram.io](https://dbdiagram.io/)  
 Схемма доступна по [ссылке](https://dbdiagram.io/d/64abd94802bd1c4a5ecb3624)  
@@ -32,6 +36,7 @@ Frontend будет доступен в другом репозитории.
 - [GORM](https://gorm.io/) + [MySQL Driver](https://github.com/go-gorm/mysql)
 - [bcrypt](https://pkg.go.dev/golang.org/x/crypto/bcrypt)
 - [GoDotENV](https://github.com/joho/godotenv)
+- [Faker v4](github.com/bxcodec/faker)
 
 ## Референс
 - [Go Ambassador](https://github.com/antoniopapa/go-ambassador) by AntonioPapa

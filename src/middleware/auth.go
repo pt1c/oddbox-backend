@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"ambassador/src/config"
+	"oddbox/src/config"
 
 	jwtware "github.com/gofiber/contrib/jwt"
 	"github.com/gofiber/fiber/v2"

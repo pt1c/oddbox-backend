@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"ambassador/src/config"
-	"ambassador/src/database"
-	"ambassador/src/models"
 	"errors"
+	"oddbox/src/config"
+	"oddbox/src/database"
+	"oddbox/src/models"
 	"time"
 
 	"gorm.io/gorm"

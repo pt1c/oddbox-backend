@@ -1,10 +1,10 @@
 package main
 
 import (
-	"ambassador/src/config"
-	"ambassador/src/database"
-	"ambassador/src/router"
 	"log"
+	"oddbox/src/config"
+	"oddbox/src/database"
+	"oddbox/src/router"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"

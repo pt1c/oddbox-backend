@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"ambassador/src/database"
-	"ambassador/src/models"
+	"oddbox/src/database"
+	"oddbox/src/models"
 
 	"github.com/gofiber/fiber/v2"
 )
